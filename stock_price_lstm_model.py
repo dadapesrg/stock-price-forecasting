@@ -56,7 +56,7 @@ model.add(Dense(units=1))  # Output layer, predicting the 'close' price
 # Compile the model
 model.compile(optimizer='adam', loss='mean_squared_error')
 # Train the model
-model.fit(X_train, y_train, batch_size=32, epochs=80)
+model.fit(X_train, y_train, batch_size=8, epochs=150) #32
 
 # Make predictions
 predictions = model.predict(X_test)
