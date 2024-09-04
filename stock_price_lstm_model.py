@@ -48,7 +48,6 @@ model.add(LSTM(units=50, return_sequences=True))
 model.add(Dropout(0.2))
 model.add(LSTM(units=50, return_sequences=False))
 model.add(Dropout(0.2))
-
 # Add Dense layer
 model.add(Dense(units=25))
 model.add(Dense(units=1))  # Output layer, predicting the 'close' price
