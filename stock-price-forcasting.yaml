@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: price-deployment
+  labels:
+    app: price
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: price
+  template:
+    metadata:
+      labels:
+        app: price
+    spec:
+      containers:
+      - name: kind_newton
+        image: mystock-model-repo
+        ports:
+        - containerPort: 8282
